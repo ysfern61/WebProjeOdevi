@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Yönetim Sistemi</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Etkinlik Yönetim Sistemi</h1>
+        </header>
+
+        <main>
+            <section class="auth-section">
+                <div class="auth-buttons">
+                    <button id="showLoginBtn" class="auth-btn">Giriş Yap</button>
+                    <button id="showRegisterBtn" class="auth-btn">Kayıt Ol</button>
+                    <button id="showAdminBtn" class="auth-btn">Admin Girişi</button>
+                </div>
+
+                <!-- Giriş Formu -->
+                <form id="loginForm" class="auth-form" style="display: none;">
+                    <h2>Giriş Yap</h2>
+                    <input type="email" id="loginEmail" placeholder="E-posta adresiniz" required>
+                    <input type="password" id="loginPassword" placeholder="Şifreniz" required>
+                    <button type="submit">Giriş Yap</button>
+                    <p class="form-link">Hesabınız yok mu? <a href="#" id="showRegisterLink">Kayıt Ol</a></p>
+                </form>
+
+                <!-- Kayıt Formu -->
+                <form id="registerForm" class="auth-form" style="display: none;">
+                    <h2>Kayıt Ol</h2>
+                    <input type="email" id="registerEmail" placeholder="E-posta adresiniz" required>
+                    <input type="password" id="registerPassword" placeholder="Şifreniz" required>
+                    <button type="submit">Kayıt Ol</button>
+                    <p class="form-link">Zaten hesabınız var mı? <a href="#" id="showLoginLink">Giriş Yap</a></p>
+                </form>
+
+                <!-- Admin Giriş Formu -->
+                <form id="adminForm" class="auth-form" style="display: none;">
+                    <h2>Admin Girişi</h2>
+                    <input type="email" id="adminEmail" placeholder="Admin E-posta" required>
+                    <input type="password" id="adminPassword" placeholder="Admin Şifre" required>
+                    <button type="submit">Giriş Yap</button>
+                    <p class="form-link"><a href="#" id="showMainLink">Ana Sayfaya Dön</a></p>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <div id="snackbar"></div>
+
+    <!-- First Login Password Change Modal -->
+    <div id="passwordChangeModal" class="modal">
+        <div class="modal-content">
+            <h2>Şifre Değiştirme</h2>
+            <p>İlk girişinizi yaptınız. Güvenliğiniz için şifrenizi değiştirmeniz gerekmektedir.</p>
+            <form id="firstLoginPasswordForm">
+                <div class="form-group">
+                    <label for="newPassword">Yeni Şifre</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Şifre Tekrar</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="modern-btn">Şifreyi Değiştir</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../static/login.js"></script>
+</body>
+</html> 

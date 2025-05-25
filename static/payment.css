@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #2d6cdf;
+  margin: 0;
+}
+
+/* Panel Section Styles */
+.panel-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2.2rem;
+  margin-bottom: 2.2rem;
+  transition: box-shadow 0.3s;
+}
+
+.panel-section:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+
+.panel-section h2 {
+  color: #2d6cdf;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: #2d6cdf;
+  box-shadow: 0 0 0 3px rgba(45,108,223,0.2);
+  outline: none;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+}
+
+/* Button Styles */
+.modern-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2d6cdf;
+  color: #fff;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(45,108,223,0.15);
+  font-size: 1rem;
+}
+
+.modern-btn:hover {
+  background: #1b4fa0;
+  transform: translateY(-2px);
+}
+
+.modern-btn:active {
+  transform: translateY(0);
+}
+
+/* Cart Styles */
+#cartItems {
+  margin-bottom: 1.5rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cart-item span:first-child {
+  font-weight: 500;
+  color: #333;
+  flex-grow: 1;
+}
+
+.cart-item span:nth-child(2) {
+  font-weight: 600;
+  color: #2d6cdf;
+  margin: 0 1rem;
+}
+
+#cartTotal {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  text-align: right;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px dashed #ccc;
+}
+
+/* Bank Transfer Section */
+#bankTransferFields {
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid #2d6cdf;
+}
+
+#bankTransferFields h3 {
+  color: #2d6cdf;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#bankTransferFields p {
+  margin: 0.5rem 0;
+}
+
+/* Credit Card Fields */
+#creditCardFields {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Snackbar for notifications */
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #323232;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 40px;
+  font-size: 1.1rem;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  transition: visibility 0s, opacity 0.3s linear;
+  opacity: 0;
+}
+
+#snackbar.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .panel-section {
+    padding: 1.5rem;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  header h1 {
+    margin-bottom: 1rem;
+  }
+}

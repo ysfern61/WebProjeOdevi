@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Girişi - Etkinlik Yönetim Sistemi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Girişi</h1>
+        </header>
+
+        <main>
+            <section class="auth-section">
+                <h2>Admin Girişi</h2>
+                <form id="adminLogin">
+                    <input type="email" id="adminEmail" placeholder="Admin E-posta" required>
+                    <input type="password" id="adminPassword" placeholder="Admin Şifre" required>
+                    <button type="submit">Giriş Yap</button>
+                </form>
+                <p><a href="{{ url_for('index') }}">Ana Sayfaya Dön</a></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html> 

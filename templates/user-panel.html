@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Paneli - Etkinlik Yönetim Sistemi</title>
+    <link rel="stylesheet" href="../static/userPanel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="panel-header">
+            <h1>Kullanıcı Paneli</h1>
+            <button id="logout-btn" class="modern-btn">Çıkış Yap</button>
+        </div>
+
+        <div class="panel-section">
+            <h2>Duyurular</h2>
+            <div id="announcementList" class="card-list"></div>
+        </div>
+
+        <div class="panel-section">
+            <h2>Etkinlikler</h2>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem;align-items:center;">
+                <input type="text" id="eventSearch" placeholder="Etkinlik Ara..." style="padding:0.5rem 1rem;border-radius:6px;border:1px solid #ccc;">
+                <input type="text" id="eventTypeFilter" placeholder="Tür Filtrele..." style="padding:0.5rem 1rem;border-radius:6px;border:1px solid #ccc;">
+                <input type="date" id="eventDateFilter" style="padding:0.5rem 1rem;border-radius:6px;border:1px solid #ccc;">
+            </div>
+            <div id="eventsList" class="card-list"></div>
+        </div>
+
+        <div class="panel-section" id="cartSection" style="display:none;">
+            <h2>Sepetim</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <button id="checkoutBtn" class="modern-btn">Ödeme Yap</button>
+        </div>
+
+        <!-- Ödeme Modalı veya Formu -->
+        <div class="panel-section" id="paymentSection" style="display:none;">
+            <h2>Ödeme</h2>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="cardNumber">Kart Numarası</label>
+                    <input type="text" id="cardNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardName">Kart Üzerindeki İsim</label>
+                    <input type="text" id="cardName" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardDate">Son Kullanma Tarihi</label>
+                    <input type="text" id="cardDate" placeholder="AA/YY" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardCVC">CVC</label>
+                    <input type="text" id="cardCVC" required>
+                </div>
+                <button type="submit" class="modern-btn">Ödemeyi Tamamla</button>
+            </form>
+        </div>
+        <div class="panel-section">
+            <h2>Biletlerim</h2>
+            <div id="ticketsList" class="card-list"></div>
+        </div>
+        <div class="panel-section">
+            <h2>Şifre Değiştir</h2>
+            <form id="changePasswordForm">
+                <div class="form-group">
+                    <label for="currentPassword">Mevcut Şifre</label>
+                    <input type="password" id="currentPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Yeni Şifre</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <button type="submit" class="modern-btn">Şifreyi Değiştir</button>
+            </form>
+        </div>
+
+
+
+        <div class="panel-section">
+            <h2>Profilimi Güncelle</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="profileEmail">E-posta</label>
+                    <input type="email" id="profileEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="profileInterests">İlgi Alanları</label>
+                    <input type="text" id="profileInterests" placeholder="Virgülle ayırın">
+                </div>
+                <button type="submit" class="modern-btn">Profili Güncelle</button>
+            </form>
+        </div>
+    </div>
+    <div id="snackbar"></div>
+    <script src="../static/userPanel.js"></script>
+</body>
+</html> 

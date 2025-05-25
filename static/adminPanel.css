@@ -1,0 +1,194 @@
+.panel-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 2.2rem;
+  margin-bottom: 2.2rem;
+  transition: box-shadow 0.3s;
+}
+.panel-section:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+}
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.2rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.user-panel-link {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: #27ae60;
+  color: #fff;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(39,174,96,0.08);
+}
+
+.user-panel-link:hover {
+  background: #219653;
+  transform: translateY(-2px) scale(1.04);
+}
+.modern-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2d6cdf;
+  color: #fff;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(45,108,223,0.08);
+}
+.modern-btn:hover {
+  background: #1b4fa0;
+  transform: translateY(-2px) scale(1.04);
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.7rem;
+}
+.card {
+  background: #f7f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.3rem 1.7rem;
+  min-width: 260px;
+  max-width: 350px;
+  flex: 1 1 260px;
+  transition: box-shadow 0.2s, transform 0.15s;
+  position: relative;
+}
+.card:hover {
+  box-shadow: 0 6px 24px rgba(45,108,223,0.13);
+  transform: translateY(-3px) scale(1.03);
+}
+.card h3 {
+  margin-top: 0;
+}
+.form-group {
+  margin-bottom: 1.2rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #323232;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  bottom: 40px;
+  font-size: 1.1rem;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  transition: visibility 0s, opacity 0.3s linear;
+  opacity: 0;
+}
+#snackbar.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Weather Info Styles */
+.weather-info {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.weather-info.good {
+  background-color: rgba(39, 174, 96, 0.1);
+  border: 1px solid #27ae60;
+  color: #27ae60;
+}
+
+.weather-info.warning {
+  background-color: rgba(243, 156, 18, 0.1);
+  border: 1px solid #f39c12;
+  color: #f39c12;
+}
+
+.weather-info.danger {
+  background-color: rgba(231, 76, 60, 0.1);
+  border: 1px solid #e74c3c;
+  color: #e74c3c;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  width: 80%;
+  max-width: 600px;
+  animation: slideIn 0.3s;
+}
+
+.close-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes slideIn {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
